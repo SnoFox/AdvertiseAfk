@@ -1,0 +1,6 @@
+name: AdvertiseAfk
+version: ${project.version}
+main: net.snofox.minecraft.advertiseafk.AdvertiseAfk
+api-version: 1.15
+depend: [ AFKPlus ]
+authors: [ SnoFox ]
