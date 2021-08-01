@@ -30,7 +30,7 @@ public final class AdvertiseAfk extends JavaPlugin implements Listener {
     }
 
     @EventHandler(ignoreCancelled = true)
-    final void onAfkStart(final AFKStartEvent ev) {
+    void onAfkStart(final AFKStartEvent ev) {
         final UUID playerId = ev.getPlayer().getUUID();
         final Player p = getServer().getPlayer(playerId);
         if(!names.containsKey(playerId)) names.put(playerId, p.getPlayerListName());
@@ -38,7 +38,7 @@ public final class AdvertiseAfk extends JavaPlugin implements Listener {
     }
 
     @EventHandler(ignoreCancelled = true)
-    final void onAfkStop(final AFKStopEvent ev) {
+    void onAfkStop(final AFKStopEvent ev) {
         final UUID playerId = ev.getPlayer().getUUID();
         final Player p = getServer().getPlayer(playerId);
         p.setPlayerListName(names.remove(playerId));
